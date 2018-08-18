@@ -25,6 +25,10 @@ dependencies {
     api localGroovy()
     api "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
 
+    implementation 'com.squareup.okhttp3:okhttp:3.11.0'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.6'
+    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.9.6'
+
     testImplementation "org.jetbrains.kotlin:kotlin-reflect:$kotlinVersion"
     testImplementation "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     testImplementation 'junit:junit:4.12'
