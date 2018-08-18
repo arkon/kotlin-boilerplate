@@ -2,7 +2,7 @@ package me.echeung.weathereh
 
 import com.fasterxml.jackson.dataformat.xml.XmlMapper
 import com.fasterxml.jackson.module.kotlin.KotlinModule
-import me.echeung.weathereh.model.CityList
+import me.echeung.weathereh.model.SiteList
 import okhttp3.OkHttpClient
 import okhttp3.Request
 
@@ -16,7 +16,7 @@ fun main(args: Array<String>) {
     val response = client.newCall(request).execute()
 
     val mapper = XmlMapper().registerModule(KotlinModule())
-    val obj = mapper.readValue(response.body()!!.string(), CityList::class.java)
+    val siteList = mapper.readValue(response.body()!!.string(), SiteList::class.java)
 
-    System.out.println(obj)
+    System.out.println(siteList)
 }
